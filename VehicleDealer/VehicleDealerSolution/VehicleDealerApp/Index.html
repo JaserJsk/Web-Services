@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Car Factory App</title>
+</head>
+<body>
+
+<div>
+    <h2>
+        All Factories
+        <ul id="list-factories" />
+    </h2>
+</div>
+
+<!-- ------------------------------------------ -->
+
+<div>
+    <h2>
+        Search by ID
+    </h2>
+    <input type="text" id="findById" size="5" />
+    <input type="button" value="Search" onclick="findItem();" />
+    <div id="find-factory"></div>
+</div>
+
+<!-- ------------------------------------------ -->
+
+<div>
+    <h2>
+        Add New Factory
+    </h2>
+    <input type="text" id="addFactoryName" size="5" />
+    <input type="text" id="addFactoryLocation" size="5" />
+    <input type="button" value="Add" onclick="addItem();" />
+    <div id="add-factory"></div>
+</div>
+
+<!-- ------------------------------------------ -->
+
+<div>
+    <h2>
+        Delete by ID
+    </h2>
+    <input type="text" id="deleteById" size="5" />
+    <input type="button" value="Delete" onclick="deleteItem();" />
+    <div id="delete-factory"></div>
+</div>
+
+<!-- ------------------------------------------ -->
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+
+<script src="Scripts/ListFactoryItem.js"></script>
+
+<script src="Scripts/FindFactoryItem.js"></script>
+
+<script src="Scripts/AddFactoryItem.js"></script>
+
+<script src="Scripts/DeleteFactoryItem.js"></script>
+
+</body>
+</html>

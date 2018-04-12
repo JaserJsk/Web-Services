@@ -1,0 +1,7 @@
+Obligatorisk skriftlig rapport/redogörelse
+
+Jag vill att ni redogör skriftligt för följande saker:
+•	Förklarar de grundläggande skillnaderna mellan SOAP och REST.
+•	Förklarar de grundläggande skillnaderna mellan WCF och WEB.API.
+•	Redogör för de vanligaste säkerhetshoten enligt OWASP top 10.
+•	Förklarar skillnaderna mellan Oath2/OpenID-connect.
