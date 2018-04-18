@@ -44,7 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\RestServiceReference\Reference.cs">
+    <Compile Include="Connected Services\RestEvalReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -54,37 +54,34 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Connected Services\RestServiceReference\EvalService.wsdl" />
-    <None Include="Connected Services\RestServiceReference\item.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\RestServiceReference\item1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\RestServiceReference\item2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\RestServiceReference\RestClient.RestServiceReference.Eval.datasource">
+    <None Include="Connected Services\RestEvalReference\RestClient.RestEvalReference.Eval.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RestEvalReference\RestServiceLibrary.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RestEvalReference\service.wsdl" />
+    <None Include="Connected Services\RestEvalReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RestEvalReference\service1.xsd">
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\RestServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\RestEvalReference\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\RestServiceReference\item.disco" />
+    <None Include="Connected Services\RestEvalReference\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\RestServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\RestEvalReference\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\RestServiceReference\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\RestServiceReference\Reference.svcmap">
+    <None Include="Connected Services\RestEvalReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using RestClient.RestServiceReference;
+using RestClient.RestEvalReference;
 
 namespace RestClient
 {
@@ -11,7 +11,7 @@ namespace RestClient
     {
         static void Main(string[] args)
         {
-            EvalServiceClient client = new EvalServiceClient("BasicHttpBinding_IEvalService");
+            EvalClient client = new EvalClient("BasicHttpBinding_IEval");
             Eval ev = new Eval();
 
             ev.Id = "1";

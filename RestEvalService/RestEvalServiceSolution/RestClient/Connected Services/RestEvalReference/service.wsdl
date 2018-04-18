@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EvalService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/RestServiceLibrary.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEval_GetEval_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEval" />
+  </wsdl:message>
+  <wsdl:message name="IEval_GetEval_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEval_GetEvalById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvalById" />
+  </wsdl:message>
+  <wsdl:message name="IEval_GetEvalById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvalByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEval_GetEvalsBySubmitter_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvalsBySubmitter" />
+  </wsdl:message>
+  <wsdl:message name="IEval_GetEvalsBySubmitter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvalsBySubmitterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEval_GetAllEvals_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEvals" />
+  </wsdl:message>
+  <wsdl:message name="IEval_GetAllEvals_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEvalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEval_SubmitEval_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitEval" />
+  </wsdl:message>
+  <wsdl:message name="IEval_SubmitEval_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitEvalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEval_RemoveEval_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveEval" />
+  </wsdl:message>
+  <wsdl:message name="IEval_RemoveEval_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveEvalResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEval">
+    <wsdl:operation name="GetEval">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEval/GetEval" message="tns:IEval_GetEval_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEval/GetEvalResponse" message="tns:IEval_GetEval_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEvalById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEval/GetEvalById" message="tns:IEval_GetEvalById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEval/GetEvalByIdResponse" message="tns:IEval_GetEvalById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEvalsBySubmitter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEval/GetEvalsBySubmitter" message="tns:IEval_GetEvalsBySubmitter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEval/GetEvalsBySubmitterResponse" message="tns:IEval_GetEvalsBySubmitter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEvals">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEval/GetAllEvals" message="tns:IEval_GetAllEvals_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEval/GetAllEvalsResponse" message="tns:IEval_GetAllEvals_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitEval">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEval/SubmitEval" message="tns:IEval_SubmitEval_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEval/SubmitEvalResponse" message="tns:IEval_SubmitEval_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveEval">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEval/RemoveEval" message="tns:IEval_RemoveEval_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEval/RemoveEvalResponse" message="tns:IEval_RemoveEval_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IEval" type="tns:IEval">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEval">
+      <soap:operation soapAction="http://tempuri.org/IEval/GetEval" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEvalById">
+      <soap:operation soapAction="http://tempuri.org/IEval/GetEvalById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEvalsBySubmitter">
+      <soap:operation soapAction="http://tempuri.org/IEval/GetEvalsBySubmitter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEvals">
+      <soap:operation soapAction="http://tempuri.org/IEval/GetAllEvals" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitEval">
+      <soap:operation soapAction="http://tempuri.org/IEval/SubmitEval" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveEval">
+      <soap:operation soapAction="http://tempuri.org/IEval/RemoveEval" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EvalService">
+    <wsdl:port name="BasicHttpBinding_IEval" binding="tns:BasicHttpBinding_IEval">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/RestServiceLibrary/Service/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
