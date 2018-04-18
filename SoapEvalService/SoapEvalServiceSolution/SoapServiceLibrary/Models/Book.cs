@@ -8,15 +8,9 @@ using System.Threading.Tasks;
 namespace SoapServiceLibrary
 {
     [DataContract]
-    public class Media
+    public class Book : Media
     {
         [DataMember]
-        public int Id { get; set; }
-
-        [DataMember]
-        public string Title { get; set; }
-
-        [DataMember]
-        public int NbrOfPages { get; set; }
+        public string Type { get; set; }
     }
 }

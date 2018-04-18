@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 namespace SoapServiceLibrary
 {
     [ServiceContract]
-    public interface IMediaService
+    public interface IMedia
     {
+        #region BOOKS
         [OperationContract]
         List<Book> GetAllBooks();
 
@@ -18,7 +19,9 @@ namespace SoapServiceLibrary
 
         [OperationContract]
         Book RemoveBookFromLIbrary(int id);
+        #endregion
 
+        #region PAPER
         [OperationContract]
         List<Paper> GetAllPapers();
 
@@ -27,5 +30,6 @@ namespace SoapServiceLibrary
 
         [OperationContract]
         Paper RemovePaperFromLIbrary(int id);
+        #endregion
     }
 }

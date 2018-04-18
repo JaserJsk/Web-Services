@@ -49,7 +49,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\SoapServiceReference\Reference.cs">
+    <Compile Include="Connected Services\SoapEvalReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -108,21 +108,21 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\RiksbankServiceReference\SweaService.wsdl" />
-    <None Include="Connected Services\SoapServiceReference\item.xsd">
+    <None Include="Connected Services\SoapEvalReference\service.wsdl" />
+    <None Include="Connected Services\SoapEvalReference\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\SoapServiceReference\item1.xsd">
+    <None Include="Connected Services\SoapEvalReference\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\SoapServiceReference\item2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SoapServiceReference\MediaService.wsdl" />
-    <None Include="Connected Services\SoapServiceReference\SoapClient.SoapServiceReference.Book.datasource">
+    <None Include="Connected Services\SoapEvalReference\SoapClient.SoapEvalReference.Book.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\SoapServiceReference\SoapClient.SoapServiceReference.Paper.datasource">
+    <None Include="Connected Services\SoapEvalReference\SoapClient.SoapEvalReference.Paper.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SoapEvalReference\SoapServiceLibrary.xsd">
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -130,22 +130,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\RiksbankServiceReference\" />
-    <WCFMetadataStorage Include="Connected Services\SoapServiceReference\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\SoapServiceReference\item.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\SoapServiceReference\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\SoapServiceReference\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\SoapServiceReference\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
+    <WCFMetadataStorage Include="Connected Services\SoapEvalReference\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\RiksbankServiceReference\configuration91.svcinfo" />
@@ -155,6 +140,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\RiksbankServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SoapEvalReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SoapEvalReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SoapEvalReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

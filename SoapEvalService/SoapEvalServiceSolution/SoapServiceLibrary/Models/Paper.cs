@@ -12,7 +12,5 @@ namespace SoapServiceLibrary
     {
         [DataMember]
         public string Category { get; set; }
-        [DataMember]
-        public decimal Price { get; set; }
     }
 }

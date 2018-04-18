@@ -8,10 +8,12 @@ using System.Threading.Tasks;
 namespace SoapServiceLibrary
 {
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
-    public class MediaService : IMediaService
+    public class MediaService : IMedia
     {
+        #region LISTS
         List<Book> Books = new List<Book>();
         List<Paper> Papers = new List<Paper>();
+        #endregion
 
         #region BOOKS
         public List<Book> GetAllBooks()

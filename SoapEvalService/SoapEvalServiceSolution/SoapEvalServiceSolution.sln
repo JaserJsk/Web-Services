@@ -8,6 +8,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoapConsoleHost", "SoapConsoleHost\SoapConsoleHost.csproj", "{FBDE8D8E-B813-4E88-BE88-12B5A3DE0B10}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoapClient", "SoapClient\SoapClient.csproj", "{E3B7E1D6-9114-40AE-93C8-9987849E0351}"
+	ProjectSection(ProjectDependencies) = postProject
+		{50E27EBB-8938-4422-9C68-30E681E2AD59} = {50E27EBB-8938-4422-9C68-30E681E2AD59}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +33,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2ABA1962-D1F8-49D7-B8C2-F3F5DFD81A47}
 	EndGlobalSection
 EndGlobal

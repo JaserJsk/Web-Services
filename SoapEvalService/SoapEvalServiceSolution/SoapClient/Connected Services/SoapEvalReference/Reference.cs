@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SoapClient.SoapServiceReference {
+namespace SoapClient.SoapEvalReference {
     using System.Runtime.Serialization;
     using System;
     
@@ -17,26 +17,10 @@ namespace SoapClient.SoapServiceReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Book", Namespace="http://schemas.datacontract.org/2004/07/SoapServiceLibrary")]
     [System.SerializableAttribute()]
-    public partial class Book : SoapClient.SoapServiceReference.Media {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal PriceField;
+    public partial class Book : SoapClient.SoapEvalReference.Media {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string TypeField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Price {
-            get {
-                return this.PriceField;
-            }
-            set {
-                if ((this.PriceField.Equals(value) != true)) {
-                    this.PriceField = value;
-                    this.RaisePropertyChanged("Price");
-                }
-            }
-        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Type {
@@ -56,8 +40,8 @@ namespace SoapClient.SoapServiceReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Media", Namespace="http://schemas.datacontract.org/2004/07/SoapServiceLibrary")]
     [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapClient.SoapServiceReference.Paper))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapClient.SoapServiceReference.Book))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapClient.SoapEvalReference.Paper))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapClient.SoapEvalReference.Book))]
     public partial class Media : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -68,6 +52,9 @@ namespace SoapClient.SoapServiceReference {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int NbrOfPagesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal PriceField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string TitleField;
@@ -109,6 +96,19 @@ namespace SoapClient.SoapServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Title {
             get {
                 return this.TitleField;
@@ -135,13 +135,10 @@ namespace SoapClient.SoapServiceReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Paper", Namespace="http://schemas.datacontract.org/2004/07/SoapServiceLibrary")]
     [System.SerializableAttribute()]
-    public partial class Paper : SoapClient.SoapServiceReference.Media {
+    public partial class Paper : SoapClient.SoapEvalReference.Media {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CategoryField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal PriceField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Category {
@@ -155,134 +152,121 @@ namespace SoapClient.SoapServiceReference {
                 }
             }
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Price {
-            get {
-                return this.PriceField;
-            }
-            set {
-                if ((this.PriceField.Equals(value) != true)) {
-                    this.PriceField = value;
-                    this.RaisePropertyChanged("Price");
-                }
-            }
-        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SoapServiceReference.IMediaService")]
-    public interface IMediaService {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SoapEvalReference.IMedia")]
+    public interface IMedia {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMediaService/GetAllBooks", ReplyAction="http://tempuri.org/IMediaService/GetAllBooksResponse")]
-        SoapClient.SoapServiceReference.Book[] GetAllBooks();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMedia/GetAllBooks", ReplyAction="http://tempuri.org/IMedia/GetAllBooksResponse")]
+        SoapClient.SoapEvalReference.Book[] GetAllBooks();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMediaService/GetAllBooks", ReplyAction="http://tempuri.org/IMediaService/GetAllBooksResponse")]
-        System.Threading.Tasks.Task<SoapClient.SoapServiceReference.Book[]> GetAllBooksAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMedia/GetAllBooks", ReplyAction="http://tempuri.org/IMedia/GetAllBooksResponse")]
+        System.Threading.Tasks.Task<SoapClient.SoapEvalReference.Book[]> GetAllBooksAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMediaService/PostBooks", ReplyAction="http://tempuri.org/IMediaService/PostBooksResponse")]
-        void PostBooks(SoapClient.SoapServiceReference.Book book);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMedia/PostBooks", ReplyAction="http://tempuri.org/IMedia/PostBooksResponse")]
+        void PostBooks(SoapClient.SoapEvalReference.Book book);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMediaService/PostBooks", ReplyAction="http://tempuri.org/IMediaService/PostBooksResponse")]
-        System.Threading.Tasks.Task PostBooksAsync(SoapClient.SoapServiceReference.Book book);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMedia/PostBooks", ReplyAction="http://tempuri.org/IMedia/PostBooksResponse")]
+        System.Threading.Tasks.Task PostBooksAsync(SoapClient.SoapEvalReference.Book book);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMediaService/RemoveBookFromLIbrary", ReplyAction="http://tempuri.org/IMediaService/RemoveBookFromLIbraryResponse")]
-        SoapClient.SoapServiceReference.Book RemoveBookFromLIbrary(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMedia/RemoveBookFromLIbrary", ReplyAction="http://tempuri.org/IMedia/RemoveBookFromLIbraryResponse")]
+        SoapClient.SoapEvalReference.Book RemoveBookFromLIbrary(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMediaService/RemoveBookFromLIbrary", ReplyAction="http://tempuri.org/IMediaService/RemoveBookFromLIbraryResponse")]
-        System.Threading.Tasks.Task<SoapClient.SoapServiceReference.Book> RemoveBookFromLIbraryAsync(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMedia/RemoveBookFromLIbrary", ReplyAction="http://tempuri.org/IMedia/RemoveBookFromLIbraryResponse")]
+        System.Threading.Tasks.Task<SoapClient.SoapEvalReference.Book> RemoveBookFromLIbraryAsync(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMediaService/GetAllPapers", ReplyAction="http://tempuri.org/IMediaService/GetAllPapersResponse")]
-        SoapClient.SoapServiceReference.Paper[] GetAllPapers();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMedia/GetAllPapers", ReplyAction="http://tempuri.org/IMedia/GetAllPapersResponse")]
+        SoapClient.SoapEvalReference.Paper[] GetAllPapers();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMediaService/GetAllPapers", ReplyAction="http://tempuri.org/IMediaService/GetAllPapersResponse")]
-        System.Threading.Tasks.Task<SoapClient.SoapServiceReference.Paper[]> GetAllPapersAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMedia/GetAllPapers", ReplyAction="http://tempuri.org/IMedia/GetAllPapersResponse")]
+        System.Threading.Tasks.Task<SoapClient.SoapEvalReference.Paper[]> GetAllPapersAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMediaService/PostPaper", ReplyAction="http://tempuri.org/IMediaService/PostPaperResponse")]
-        void PostPaper(SoapClient.SoapServiceReference.Paper paper);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMedia/PostPaper", ReplyAction="http://tempuri.org/IMedia/PostPaperResponse")]
+        void PostPaper(SoapClient.SoapEvalReference.Paper paper);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMediaService/PostPaper", ReplyAction="http://tempuri.org/IMediaService/PostPaperResponse")]
-        System.Threading.Tasks.Task PostPaperAsync(SoapClient.SoapServiceReference.Paper paper);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMedia/PostPaper", ReplyAction="http://tempuri.org/IMedia/PostPaperResponse")]
+        System.Threading.Tasks.Task PostPaperAsync(SoapClient.SoapEvalReference.Paper paper);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMediaService/RemovePaperFromLIbrary", ReplyAction="http://tempuri.org/IMediaService/RemovePaperFromLIbraryResponse")]
-        SoapClient.SoapServiceReference.Paper RemovePaperFromLIbrary(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMedia/RemovePaperFromLIbrary", ReplyAction="http://tempuri.org/IMedia/RemovePaperFromLIbraryResponse")]
+        SoapClient.SoapEvalReference.Paper RemovePaperFromLIbrary(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMediaService/RemovePaperFromLIbrary", ReplyAction="http://tempuri.org/IMediaService/RemovePaperFromLIbraryResponse")]
-        System.Threading.Tasks.Task<SoapClient.SoapServiceReference.Paper> RemovePaperFromLIbraryAsync(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMedia/RemovePaperFromLIbrary", ReplyAction="http://tempuri.org/IMedia/RemovePaperFromLIbraryResponse")]
+        System.Threading.Tasks.Task<SoapClient.SoapEvalReference.Paper> RemovePaperFromLIbraryAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IMediaServiceChannel : SoapClient.SoapServiceReference.IMediaService, System.ServiceModel.IClientChannel {
+    public interface IMediaChannel : SoapClient.SoapEvalReference.IMedia, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class MediaServiceClient : System.ServiceModel.ClientBase<SoapClient.SoapServiceReference.IMediaService>, SoapClient.SoapServiceReference.IMediaService {
+    public partial class MediaClient : System.ServiceModel.ClientBase<SoapClient.SoapEvalReference.IMedia>, SoapClient.SoapEvalReference.IMedia {
         
-        public MediaServiceClient() {
+        public MediaClient() {
         }
         
-        public MediaServiceClient(string endpointConfigurationName) : 
+        public MediaClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public MediaServiceClient(string endpointConfigurationName, string remoteAddress) : 
+        public MediaClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public MediaServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public MediaClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public MediaServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public MediaClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
-        public SoapClient.SoapServiceReference.Book[] GetAllBooks() {
+        public SoapClient.SoapEvalReference.Book[] GetAllBooks() {
             return base.Channel.GetAllBooks();
         }
         
-        public System.Threading.Tasks.Task<SoapClient.SoapServiceReference.Book[]> GetAllBooksAsync() {
+        public System.Threading.Tasks.Task<SoapClient.SoapEvalReference.Book[]> GetAllBooksAsync() {
             return base.Channel.GetAllBooksAsync();
         }
         
-        public void PostBooks(SoapClient.SoapServiceReference.Book book) {
+        public void PostBooks(SoapClient.SoapEvalReference.Book book) {
             base.Channel.PostBooks(book);
         }
         
-        public System.Threading.Tasks.Task PostBooksAsync(SoapClient.SoapServiceReference.Book book) {
+        public System.Threading.Tasks.Task PostBooksAsync(SoapClient.SoapEvalReference.Book book) {
             return base.Channel.PostBooksAsync(book);
         }
         
-        public SoapClient.SoapServiceReference.Book RemoveBookFromLIbrary(int id) {
+        public SoapClient.SoapEvalReference.Book RemoveBookFromLIbrary(int id) {
             return base.Channel.RemoveBookFromLIbrary(id);
         }
         
-        public System.Threading.Tasks.Task<SoapClient.SoapServiceReference.Book> RemoveBookFromLIbraryAsync(int id) {
+        public System.Threading.Tasks.Task<SoapClient.SoapEvalReference.Book> RemoveBookFromLIbraryAsync(int id) {
             return base.Channel.RemoveBookFromLIbraryAsync(id);
         }
         
-        public SoapClient.SoapServiceReference.Paper[] GetAllPapers() {
+        public SoapClient.SoapEvalReference.Paper[] GetAllPapers() {
             return base.Channel.GetAllPapers();
         }
         
-        public System.Threading.Tasks.Task<SoapClient.SoapServiceReference.Paper[]> GetAllPapersAsync() {
+        public System.Threading.Tasks.Task<SoapClient.SoapEvalReference.Paper[]> GetAllPapersAsync() {
             return base.Channel.GetAllPapersAsync();
         }
         
-        public void PostPaper(SoapClient.SoapServiceReference.Paper paper) {
+        public void PostPaper(SoapClient.SoapEvalReference.Paper paper) {
             base.Channel.PostPaper(paper);
         }
         
-        public System.Threading.Tasks.Task PostPaperAsync(SoapClient.SoapServiceReference.Paper paper) {
+        public System.Threading.Tasks.Task PostPaperAsync(SoapClient.SoapEvalReference.Paper paper) {
             return base.Channel.PostPaperAsync(paper);
         }
         
-        public SoapClient.SoapServiceReference.Paper RemovePaperFromLIbrary(int id) {
+        public SoapClient.SoapEvalReference.Paper RemovePaperFromLIbrary(int id) {
             return base.Channel.RemovePaperFromLIbrary(id);
         }
         
-        public System.Threading.Tasks.Task<SoapClient.SoapServiceReference.Paper> RemovePaperFromLIbraryAsync(int id) {
+        public System.Threading.Tasks.Task<SoapClient.SoapEvalReference.Paper> RemovePaperFromLIbraryAsync(int id) {
             return base.Channel.RemovePaperFromLIbraryAsync(id);
         }
     }

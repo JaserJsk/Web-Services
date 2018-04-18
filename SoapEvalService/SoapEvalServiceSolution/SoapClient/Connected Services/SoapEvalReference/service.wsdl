@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MediaService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/SoapServiceLibrary" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMedia_GetAllBooks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBooks" />
+  </wsdl:message>
+  <wsdl:message name="IMedia_GetAllBooks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBooksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMedia_PostBooks_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostBooks" />
+  </wsdl:message>
+  <wsdl:message name="IMedia_PostBooks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostBooksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMedia_RemoveBookFromLIbrary_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveBookFromLIbrary" />
+  </wsdl:message>
+  <wsdl:message name="IMedia_RemoveBookFromLIbrary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveBookFromLIbraryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMedia_GetAllPapers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPapers" />
+  </wsdl:message>
+  <wsdl:message name="IMedia_GetAllPapers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPapersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMedia_PostPaper_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostPaper" />
+  </wsdl:message>
+  <wsdl:message name="IMedia_PostPaper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostPaperResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMedia_RemovePaperFromLIbrary_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePaperFromLIbrary" />
+  </wsdl:message>
+  <wsdl:message name="IMedia_RemovePaperFromLIbrary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePaperFromLIbraryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMedia">
+    <wsdl:operation name="GetAllBooks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMedia/GetAllBooks" message="tns:IMedia_GetAllBooks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMedia/GetAllBooksResponse" message="tns:IMedia_GetAllBooks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostBooks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMedia/PostBooks" message="tns:IMedia_PostBooks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMedia/PostBooksResponse" message="tns:IMedia_PostBooks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveBookFromLIbrary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMedia/RemoveBookFromLIbrary" message="tns:IMedia_RemoveBookFromLIbrary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMedia/RemoveBookFromLIbraryResponse" message="tns:IMedia_RemoveBookFromLIbrary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPapers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMedia/GetAllPapers" message="tns:IMedia_GetAllPapers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMedia/GetAllPapersResponse" message="tns:IMedia_GetAllPapers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostPaper">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMedia/PostPaper" message="tns:IMedia_PostPaper_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMedia/PostPaperResponse" message="tns:IMedia_PostPaper_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemovePaperFromLIbrary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMedia/RemovePaperFromLIbrary" message="tns:IMedia_RemovePaperFromLIbrary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMedia/RemovePaperFromLIbraryResponse" message="tns:IMedia_RemovePaperFromLIbrary_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMedia" type="tns:IMedia">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllBooks">
+      <soap:operation soapAction="http://tempuri.org/IMedia/GetAllBooks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostBooks">
+      <soap:operation soapAction="http://tempuri.org/IMedia/PostBooks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveBookFromLIbrary">
+      <soap:operation soapAction="http://tempuri.org/IMedia/RemoveBookFromLIbrary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPapers">
+      <soap:operation soapAction="http://tempuri.org/IMedia/GetAllPapers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostPaper">
+      <soap:operation soapAction="http://tempuri.org/IMedia/PostPaper" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemovePaperFromLIbrary">
+      <soap:operation soapAction="http://tempuri.org/IMedia/RemovePaperFromLIbrary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MediaService">
+    <wsdl:port name="BasicHttpBinding_IMedia" binding="tns:BasicHttpBinding_IMedia">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/SoapServiceLibrary/Service/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
