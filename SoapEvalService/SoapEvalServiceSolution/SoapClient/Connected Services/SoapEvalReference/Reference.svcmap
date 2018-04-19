@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fa30702e-9ec6-4269-90d5-2f27d2aff24d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="48f07d63-de51-4495-9a4c-d79fe6142224" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/SoapServiceLibrary/Service/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="20defe98-e6fb-482a-b37e-62e93db5cb09" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/SoapServiceLibrary/Service/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="988740a9-0a98-4739-a6ad-4d6021a66088" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/SoapServiceLibrary/Service/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="852b56f2-58e8-4429-b171-9fc8abae7237" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/SoapServiceLibrary/Service/mex" />
-    <MetadataFile FileName="SoapServiceLibrary.xsd" MetadataType="Schema" ID="0e1a2868-b70f-4a5d-9916-c4461557980d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/SoapServiceLibrary/Service/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="515bfeb6-88b5-46ff-8ba4-60f383d6ed75" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/SoapServiceLibrary/Service/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="5d8d5b98-93f8-4943-9750-eca6bb716139" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/SoapServiceLibrary/Service/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="6b9257c3-2b4e-4a68-9f2e-ad57331f7f15" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/SoapServiceLibrary/Service/mex" />
+    <MetadataFile FileName="SoapServiceLibrary.Models.xsd" MetadataType="Schema" ID="de1f19d8-997f-40d1-a5bd-ab1aa739a3c1" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/SoapServiceLibrary/Service/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

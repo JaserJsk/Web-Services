@@ -121,7 +121,7 @@
     <None Include="Connected Services\SoapEvalReference\SoapClient.SoapEvalReference.Paper.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\SoapEvalReference\SoapServiceLibrary.xsd">
+    <None Include="Connected Services\SoapEvalReference\SoapServiceLibrary.Models.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

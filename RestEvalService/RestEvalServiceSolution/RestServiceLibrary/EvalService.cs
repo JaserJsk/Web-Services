@@ -6,38 +6,11 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using System.Threading.Tasks;
+using RestServiceLibrary.Interfaces;
 using RestServiceLibrary.Models;
 
 namespace RestServiceLibrary
 {
-    [ServiceContract]
-    public interface IEval
-    {
-        [OperationContract]
-        [WebGet(UriTemplate = "eval")]
-        List<Eval> GetEval();
-
-        [OperationContract]
-        [WebGet(UriTemplate = "eval/{id}")]
-        Eval GetEvalById(string Id);
-
-        [OperationContract]
-        [WebGet(UriTemplate = "evals/{submitter}")]
-        List<Eval> GetEvalsBySubmitter(string submitter);
-
-        [OperationContract]
-        [WebGet(UriTemplate = "evals")]
-        List<Eval> GetAllEvals();
-
-        [OperationContract]
-        [WebInvoke(Method = "POST", UriTemplate = "evals")]
-        void SubmitEval(Eval eval);
-
-        [OperationContract]
-        [WebInvoke(Method = "DELETE", UriTemplate = "eval/{id}")]
-        void RemoveEval(string Id);
-    }
-
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     public class EvalService : IEval
     {
@@ -55,7 +28,6 @@ namespace RestServiceLibrary
         public Eval GetEvalById(string Id)
         {
             var result = evals.First(x => x.Id.Equals(Id));
-
             return result;
         }
         #endregion
@@ -88,7 +60,9 @@ namespace RestServiceLibrary
         {
             eval.Id = (++evalCount).ToString();
             if (eval.Submitter.Equals("Throw"))
+            {
                 throw new FaultException("Error within SubmitEval");
+            }
             evals.Add(eval);
         }
         #endregion

@@ -15,7 +15,7 @@ namespace SoapClient.SoapEvalReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Book", Namespace="http://schemas.datacontract.org/2004/07/SoapServiceLibrary")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Book", Namespace="http://schemas.datacontract.org/2004/07/SoapServiceLibrary.Models")]
     [System.SerializableAttribute()]
     public partial class Book : SoapClient.SoapEvalReference.Media {
         
@@ -38,7 +38,7 @@ namespace SoapClient.SoapEvalReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Media", Namespace="http://schemas.datacontract.org/2004/07/SoapServiceLibrary")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Media", Namespace="http://schemas.datacontract.org/2004/07/SoapServiceLibrary.Models")]
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapClient.SoapEvalReference.Paper))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SoapClient.SoapEvalReference.Book))]
@@ -133,7 +133,7 @@ namespace SoapClient.SoapEvalReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Paper", Namespace="http://schemas.datacontract.org/2004/07/SoapServiceLibrary")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Paper", Namespace="http://schemas.datacontract.org/2004/07/SoapServiceLibrary.Models")]
     [System.SerializableAttribute()]
     public partial class Paper : SoapClient.SoapEvalReference.Media {
         

@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EvalService.cs" />
+    <Compile Include="Interfaces\IEval.cs" />
     <Compile Include="Models\Eval.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

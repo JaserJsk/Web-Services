@@ -15,7 +15,7 @@ namespace RestClient
             Eval ev = new Eval();
 
             ev.Id = "1";
-            ev.Submitter = "Something";
+            ev.Submitter = "This is a submitter";
             ev.Comments = "This is a comment";
             ev.TimeSent = Convert.ToDateTime(DateTime.Now);
 

@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SoapServiceLibrary
+namespace SoapServiceLibrary.Models
 {
     [DataContract]
     public class Book : Media

@@ -34,7 +34,9 @@ namespace RestConsoleHost
             Console.WriteLine("{0} is up and running with these endpoints:",
                 host.Description.ServiceType);
             foreach (ServiceEndpoint se in host.Description.Endpoints)
+            {
                 Console.WriteLine(se.Address);
+            }
         }
     }
 }
